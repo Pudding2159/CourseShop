@@ -3,7 +3,7 @@
   position: fixed;
   height: var(--circle-size);
   width: var(--circle-size);
-  border: 20px solid #7c90a1c1;
+  border: 20px solid #D9DAD8;
   border-radius: 200%;
   pointer-events: none;
   mix-blend-mode: difference;
