@@ -33,7 +33,7 @@ const Main = () => {
 
 
                     <div className="flex justify-center xs:p-7 md:p-14 ">
-                        <button class="btn">
+                        <button className="btn">
                             <svg
                                 width="24"
                                 height="24"
@@ -49,7 +49,7 @@ const Main = () => {
                                 />
                             </svg>
 
-                            <span class="text-2xl text-[#2e2b2b] font-viola">More </span>
+                            <span className="text-2xl text-[#2e2b2b] font-viola">More </span>
                         </button>
                     </div>
                 </div>

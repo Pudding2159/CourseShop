@@ -45,7 +45,7 @@ const NavbarM = () => {
 
     return (
 <div className={`fixed w-full h-20 shadow-xl z-[100] transition-all duration-[800ms] ${showNav ? 'top-0 opacity-100' : 'top-[-100%] opacity-0'}`}>
-            <div className='fixed w-full h-20 bg-[#122e49] shadow-xl z-[100]'>
+            <div className='fixed w-full h-20 bg-[#3F3C38] shadow-xl z-[100]'>
                 <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
 
 
@@ -53,7 +53,7 @@ const NavbarM = () => {
                         <ul className='hidden ms:flex flex-row justify-center gap-32' >
                             <Link href='/#Home'>
                                 <h1>
-                                    <span className="p-4  key-tag font-face-my38 text-xl" >
+                                    <span className="p-4  key-tag font-viola text-xl" >
                                         Home
                                     </span>
                                 </h1>
@@ -61,7 +61,7 @@ const NavbarM = () => {
 
                             <Link href='/#Skills'>
                                 <h1>
-                                    <span className="p-4 key-tag font-face-my38 text-xl" >
+                                    <span className="p-4 key-tag font-viola text-xl" >
                                         Skills
                                     </span>
                                 </h1>
@@ -69,7 +69,7 @@ const NavbarM = () => {
 
                             <Link href='/#Project'>
                                 <h1>
-                                    <span className="p-4 key-tag font-face-my38 text-xl" >
+                                    <span className="p-4 key-tag font-viola text-xl" >
                                         Project
                                     </span>
                                 </h1>
@@ -77,7 +77,7 @@ const NavbarM = () => {
 
                             <Link href='/#Home'>
                                 <h1>
-                                    <span className="p-4 key-tag font-face-my38 text-xl" >
+                                    <span className="p-4 key-tag font-viola text-xl" >
                                         Contact
                                     </span>
                                 </h1>
@@ -113,7 +113,7 @@ const NavbarM = () => {
                             </div>
 
                             <div className="border-b border-gray-300 my-4 ms:pt-14" >
-                                <p className="w-[85%] ms:w-[90%] py-4 text-[#DDC6B6] text-xl font-face-my38" >Lest  build something legendery</p>
+                                <p className="w-[85%] ms:w-[90%] py-4 text-[#DDC6B6] text-xl font-viola" >Lest  build something legendery</p>
                             </div>
 
                         </div >
@@ -121,14 +121,14 @@ const NavbarM = () => {
                             <ul className = "ms:pt-20">
                                 <Link href='/#Home'>
                                     <h1>
-                                        <span className="p-4 key-tag font-face-my38 font-face-my38 text-xl" >
+                                        <span className="p-4 key-tag font-viola font-viola text-xl" >
                                             Home
                                         </span>
                                     </h1>
                                 </Link>
                                 <Link href='/#Skills'>
                                     <h1>
-                                        <span className="p-4 key-tag font-face-my38 text-xl" >
+                                        <span className="p-4 key-tag font-viola text-xl" >
                                             Skills
                                         </span>
                                     </h1>
@@ -136,7 +136,7 @@ const NavbarM = () => {
 
                                 <Link href='/#Project'>
                                     <h1>
-                                        <span className="p-4 key-tag font-face-my38 text-xl" >
+                                        <span className="p-4 key-tag font-viola text-xl" >
                                             Project
                                         </span>
                                     </h1>
@@ -144,7 +144,7 @@ const NavbarM = () => {
 
                                 <Link href='/#Home'>
                                     <h1>
-                                        <span className="p-4 key-tag font-face-my38 text-xl" >
+                                        <span className="p-4 key-tag font-viola text-xl" >
                                             Contact
                                         </span>
                                     </h1>
@@ -152,7 +152,7 @@ const NavbarM = () => {
                             </ul>
                             <div className="xs:pt-10 sm:pt-28 ms:pt-40" >
 
-                                <p className="p-4 font-face-my38 uppercase tracking-widest text-[#DDC6B6]" >
+                                <p className="p-4 font-viola uppercase tracking-widest text-[#DDC6B6]" >
                                     Let's connect
                                 </p>
                                 <div className='flex items-center justify-between my-4 w-full sm:w-[40%]'>

@@ -7,7 +7,7 @@ import "@styles/Fonts.css"
 
 export const ProjectItems = ({ title_1, title_2, backgraundImg, projectUrl, height, width }) => {
     return (
-        <div className="relative flex items-center justify-center h-full w-full rounded-xl overflow-hidden group">
+            <div className="relative flex items-center justify-center h-full w-full rounded-xl overflow-hidden group">
             {/* Градиентный фон и изображение */}
             <div className="absolute inset-0 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 z-10 bg-gradient-to-r from-[#3C3935] to-[#4d4d4db1]"></div>
             <img

@@ -9,6 +9,7 @@ import Skills from 'components/Skills';
 import Projects from 'components/Projects';
 import { Reveal } from '@components/Reveal';
 import Select from '@components/Select';
+import Slider from '@components/Slider';
 const Home = ({ children }) => {
     return (
         <div>
@@ -39,10 +40,10 @@ const Home = ({ children }) => {
                     {/* <Reveal>
                         <Skills />
                     </Reveal>
-
+                    */}
                     <Reveal>
-                        <Projects />
-                    </Reveal> */}
+                        <Slider/>
+                    </Reveal> 
 
                     {children}
                 </div>

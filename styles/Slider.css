@@ -1,0 +1,116 @@
+/* Slider.css */
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin: 0 16px;
+  }
+  
+  .slider-cards {
+    display: flex;
+    overflow-x: auto; /* Keep it auto to allow for programmatically scrolling */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    white-space: nowrap;
+  }
+  
+  .card {
+    flex: 0 0 auto; /* Prevents the card from growing or shrinking */
+    width: 300px;
+    height: 300px;
+    margin: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start; /* For snap scrolling */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px; /* Adjust based on your image's aspect ratio */
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 180px); /* Adjust based on the image height */
+  }
+  
+  .card-title, .card-description, .card-price, .card-price-per-month {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .card-price {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .card-price-per-month {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  
+  
+  /* Hide scrollbar for Webkit browsers */
+  .slider-cards::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .slider-cards {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Additional styles for your buttons and other elements as needed */
+  .slider-cards {
+    /* ... other styles ... */
+    overflow-x: scroll; /* Changed from 'auto' to 'scroll' to ensure the ability to scroll */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+  }
+  
+  
+  /* Slider.css */
+  .slider button {
+    background-color: #f0f0f05b;  /* Light grey background */
+    border: none;                 /* No border */
+    cursor: pointer;              /* Pointer cursor on hover */
+    padding: 10px 20px;           /* Padding around the text */
+    font-size: 50px;              /* Larger font size for the arrow */
+    border-radius: 60px;          /* Rounded corners, adjust radius as needed */
+  }
+  
+  .slider button:hover {
+    background-color: #cccccc;    /* Darker background on hover */
+  }
