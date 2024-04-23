@@ -1,0 +1,48 @@
+.icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.bar1 {
+  animation: bar1 .6s infinite alternate;
+  transform: translateY(20%);
+  animation-delay: 0.4s;
+}
+.bar2 {
+  animation: bar2 .3s infinite alternate;
+  animation-delay: 0.3s;
+}
+.bar3 {
+  animation: bar3 .4s infinite alternate;
+  transform: translateY(50%);
+  animation-delay: 0.5s;
+}
+
+@keyframes bar1 {
+  0% {
+    transform: translateY(40%);
+  }
+  100% {
+    transform: translateY(0%);
+    fill: #3F3C38;    
+  }
+}
+@keyframes bar2 {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0%);
+    fill: #3F3C38;    
+  }
+}
+@keyframes bar3 {
+  0% {
+    transform: translateY(60%);
+  }
+  100% {
+    transform: translateY(0%);
+    fill: #3F3C38;    
+  }
+}

@@ -7,6 +7,7 @@ import '@styles/More_button.css'
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { BsFillPersonLinesFill, BsHouseAdd } from 'react-icons/bs'
+import Link from 'next/link';
 
 
 const Main = () => {
@@ -16,23 +17,25 @@ const Main = () => {
 
                 <div className="">
 
-                    <p className='uppercase text-ms tracking-widest text-[#7C90A1] p-3 md:pt-10 xs:pt-4' >Let's work together</p>
+                    <p className='uppercase text-ms tracking-widest text-[#D9DAD8] p-3 md:pt-10 xs:pt-4' >Let's work together</p>
 
-                    <h1 className='uppercase text-5xl text-[#7C90A1] ms:hidden font-viola'>
-                        Rita <span className="text-[#7C90A1] key-tag font-viola">Hory</span>
+                    <h1 className='uppercase text-5xl text-[#D9DAD8] ms:hidden font-viola'>
+                        Rita <span className="text-[#D9DAD8]  font-viola">Hory</span>
                     </h1>
 
-                    <h1 className='uppercase py-2 text-9xl text-[#7C90A1] hidden ms:block font-viola'>
-                        Rita <span className="text-[#7C90A1] key-tag  ">Hory</span>
+                    <h1 className='uppercase py-2 text-9xl text-[#D9DAD8] hidden ms:block font-viola'>
+                        Rita <span className="text-[#D9DAD8]   ">Hory</span> 
+                        {/* key-tag */}
                     </h1>
 
-                    <h1 className='uppercase py-2 xs:text-lg ms:text-xl tracking-widest text-[#9fbfdb] '>
-                        Experienced <span className="text-[#DDC6B6]">pianist and music composer</span> with
-                        <span className="text-[#DDC6B6]"> over 10 years of experience</span> and a <span className="text-[#DDC6B6]">professional music teacher.</span>
+                    <h1 className='uppercase py-2 xs:text-lg ms:text-xl tracking-widest text-[#D9DAD8] '>
+                        Experienced <span className="text-[#D9DAD8]">pianist and music composer</span> with
+                        <span className="text-[#D9DAD8]"> over 10 years of experience</span> and a <span className="text-[#D9DAD8]">professional music teacher.</span>
                     </h1>
 
 
                     <div className="flex justify-center xs:p-7 md:p-14 ">
+                    <Link href='/#Select'>
                         <button className="btn">
                             <svg
                                 width="24"
@@ -48,9 +51,10 @@ const Main = () => {
                                     // fill="currentColor"
                                 />
                             </svg>
-
                             <span className="text-2xl text-[#2e2b2b] font-viola">More </span>
                         </button>
+                        </Link>
+
                     </div>
                 </div>
 

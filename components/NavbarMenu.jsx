@@ -59,10 +59,10 @@ const NavbarM = () => {
                                 </h1>
                             </Link>
 
-                            <Link href='/#Skills'>
+                            <Link href='/#Select'>
                                 <h1>
                                     <span className="p-4 key-tag font-viola text-xl" >
-                                        Skills
+                                        choice
                                     </span>
                                 </h1>
                             </Link>
@@ -70,7 +70,7 @@ const NavbarM = () => {
                             <Link href='/#Project'>
                                 <h1>
                                     <span className="p-4 key-tag font-viola text-xl" >
-                                        Project
+                                        Registrations
                                     </span>
                                 </h1>
                             </Link>
@@ -89,7 +89,7 @@ const NavbarM = () => {
                     <div className="flex flex-none ms:px-10 xs:px-5">
                         <div onClick={handleNav}>
                             <Image
-                                src='/icons/Home_Icon.png'
+                                src='/icons/Vinil.png'
                                 width={47}
                                 height={47}
                                 alt='Home'
@@ -107,13 +107,13 @@ const NavbarM = () => {
 
                         <div>
                             <div className="flex w-full items-center justify-between">
-                                <div onClick={handleNav} className="bg-[#d0d0d0] rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer" >
+                                <div onClick={handleNav} className="bg-[#D9DAD8] rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer" >
                                     <AiOutlineClose />
                                 </div>
                             </div>
 
                             <div className="border-b border-gray-300 my-4 ms:pt-14" >
-                                <p className="w-[85%] ms:w-[90%] py-4 text-[#DDC6B6] text-xl font-viola" >Lest  build something legendery</p>
+                                <p className="w-[85%] ms:w-[90%] py-4 text-[#D9DAD8] text-xl font-viola" >Lest  build something legendery</p>
                             </div>
 
                         </div >
@@ -129,7 +129,7 @@ const NavbarM = () => {
                                 <Link href='/#Skills'>
                                     <h1>
                                         <span className="p-4 key-tag font-viola text-xl" >
-                                            Skills
+                                        choice
                                         </span>
                                     </h1>
                                 </Link>
@@ -137,7 +137,7 @@ const NavbarM = () => {
                                 <Link href='/#Project'>
                                     <h1>
                                         <span className="p-4 key-tag font-viola text-xl" >
-                                            Project
+                                        Register
                                         </span>
                                     </h1>
                                 </Link>
@@ -152,7 +152,7 @@ const NavbarM = () => {
                             </ul>
                             <div className="xs:pt-10 sm:pt-28 ms:pt-40" >
 
-                                <p className="p-4 font-viola uppercase tracking-widest text-[#DDC6B6]" >
+                                <p className="p-4 font-viola uppercase tracking-widest text-[#D9DAD8]" >
                                     Let's connect
                                 </p>
                                 <div className='flex items-center justify-between my-4 w-full sm:w-[40%]'>
