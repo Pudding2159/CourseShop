@@ -37,7 +37,7 @@ const Slider = () => {
     // Render the slider component
     return (
 
-        <div className="flex-col w-screen h-auto">
+        <div className="flex-col w-[90vw] h-auto">
 
             <div className="text-6xl uppercase text-center justify-center md:p-20 xs:p-7 font-viola ">
                 feedback
