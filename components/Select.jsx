@@ -47,7 +47,7 @@ function Select() {
                         </div>
 
                         <teg_1 >
-                            <span>MORE INFO</span>
+                            <span className = "font-viola" >MORE INFO</span>
                         </teg_1>
                     </div>
 
@@ -73,7 +73,7 @@ function Select() {
                         </div>
 
                         <teg_1 >
-                            <span>MORE INFO</span>
+                            <span className = "font-viola" >MORE INFO</span>
                         </teg_1>
                     </div>
 
@@ -100,7 +100,7 @@ function Select() {
                         </div>
 
                         <teg_1 >
-                            <span>MORE INFO</span>
+                            <span className = "font-viola" >MORE INFO</span>
                         </teg_1>
                     </div>
                     

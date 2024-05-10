@@ -15,7 +15,7 @@ const Home = ({ children }) => {
         <div>
 
             <div className = "hidden md:flex">
-                <CustomCursor />
+                {/* <CustomCursor /> */}
             </div>
             <NavbarM />
 
