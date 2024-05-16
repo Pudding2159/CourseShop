@@ -1,21 +1,24 @@
 import '@styles/globals.css';
-import NavbarM from 'components/NavbarMenu'; 
-import Main from "components/Main"; 
-import About from "components/About"
-import Skills from 'components/Skills';
-import Projects from 'components/Projects';
-import Contact from 'components/Contact';
+import NavbarM from '../components/NavbarMenu';
+import Template from '../components/Template';
 
 const RootLayout = ({ children }) => {
     return (
-        <div className='app'> {/* Использование <div> в качестве внешнего контейнера */}
-            <header className='header'>
-                <NavbarM />
-            </header>
-            <main style={{ position: 'relative' }}> {/* Применение стилей через атрибут style */}
-                {children}
-            </main>
-        </div>
+        <html lang="en"> {/* Добавление тега <html> */}
+            <head>
+                <title>My App</title>
+            </head>
+            <body> {/* Добавление тега <body> */}
+                <div className='app'> {/* Использование <div> в качестве внешнего контейнера */}
+                    <header className='header'>
+                        {/* <NavbarM /> */}
+                    </header>
+                    <main style={{ position: 'relative' }}> {/* Применение стилей через атрибут style */}
+                        <Template>{children}</Template>
+                    </main>
+                </div>
+            </body>
+        </html>
     );
 }
 export default RootLayout;

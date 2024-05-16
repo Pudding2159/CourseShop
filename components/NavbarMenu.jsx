@@ -8,7 +8,7 @@ import { BsFillPersonLinesFill, BsHouseAdd } from 'react-icons/bs'
 import '@styles/Light_style.css'
 import "@styles/Fonts.css"
 
-const NavbarM = () => {
+const NavbarMenu = () => {
     const [nav, setNav] = useState(false);
     const [showNav, setShowNav] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -44,7 +44,7 @@ const NavbarM = () => {
     }, [lastScrollY]);
 
     return (
-<div className={`fixed w-full h-20 shadow-xl z-[100] transition-all duration-[800ms] ${showNav ? 'top-0 opacity-100' : 'top-[-100%] opacity-0'}`}>
+        <div className={`fixed w-full h-20 shadow-xl z-[100] transition-all duration-[800ms] ${showNav ? 'top-0 opacity-100' : 'top-[-100%] opacity-0'}`}>
             <div className='fixed w-full h-20 bg-[#3F3C38] shadow-xl z-[100]'>
                 <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
 
@@ -118,7 +118,7 @@ const NavbarM = () => {
 
                         </div >
                         <div>
-                            <ul className = "ms:pt-20">
+                            <ul className="ms:pt-20">
                                 <Link href='/#Home'>
                                     <h1>
                                         <span className="p-4 key-tag font-viola font-viola text-xl" >
@@ -129,7 +129,7 @@ const NavbarM = () => {
                                 <Link href='/#Skills'>
                                     <h1>
                                         <span className="p-4 key-tag font-viola text-xl" >
-                                        choice
+                                            choice
                                         </span>
                                     </h1>
                                 </Link>
@@ -137,7 +137,7 @@ const NavbarM = () => {
                                 <Link href='/#Project'>
                                     <h1>
                                         <span className="p-4 key-tag font-viola text-xl" >
-                                        Register
+                                            Register
                                         </span>
                                     </h1>
                                 </Link>
@@ -187,7 +187,7 @@ const NavbarM = () => {
     );
 };
 
-export default NavbarM;
+export default NavbarMenu;
 
 
 

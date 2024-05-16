@@ -1,12 +1,37 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import '@styles/Fonts.css';
 import Image from 'next/image'; // Импорт Image из next/image
 import '@styles/Music.css';
 import "@styles/Button.sass"
 import "@styles/new_button.css"
 function Select() {
-    return (
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+    const ref3 = useRef(null);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Прекратить наблюдение после начала анимации
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(ref1.current);
+        observer.observe(ref2.current);
+        observer.observe(ref3.current);
+       
+        return () => { // Очистка
+            observer.disconnect();
+        };
+    }, []);
+
+
+
+
+    return (
         <div className="flex flex-col w-screen h-auto m-auto md:pt-[600px] max-w-[1240px] p-3">
 
             <div className="flex flex-row relative justify-center" id="Select">
@@ -46,7 +71,7 @@ function Select() {
                             <p className="text-white  text-xl md:text-2xl font-viola text-center">Text Text Text Text Text Text Text Text Text</p>
                         </div>
 
-                        <teg_1 >
+                        <teg_1 ref={ref1} >
                             <span className = "font-viola" >MORE INFO</span>
                         </teg_1>
                     </div>
@@ -72,7 +97,7 @@ function Select() {
                             <p className="text-white  text-xl md:text-2xl font-viola text-center">Text Text Text Text Text Text Text Text Text</p>
                         </div>
 
-                        <teg_1 >
+                        <teg_1  ref={ref2}>
                             <span className = "font-viola" >MORE INFO</span>
                         </teg_1>
                     </div>
@@ -99,7 +124,7 @@ function Select() {
                             <p className="text-white  text-xl md:text-2xl font-viola text-center">Text Text Text Text Text Text Text Text Text</p>
                         </div>
 
-                        <teg_1 >
+                        <teg_1  ref={ref3}>
                             <span className = "font-viola" >MORE INFO</span>
                         </teg_1>
                     </div>
