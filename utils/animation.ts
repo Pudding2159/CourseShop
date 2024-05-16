@@ -21,7 +21,7 @@ export const animatePageIn = () => {
     // Анимация появления сообщения
     tl.to(messageDiv, {
       opacity: 1,
-      duration: 1
+      duration: 0.3
     });
   
     // Установка начального состояния для всех баннеров
@@ -32,8 +32,8 @@ export const animatePageIn = () => {
     // Задержка перед началом анимации баннеров
     tl.to(messageDiv, {
       opacity: 0,
-      duration: 1
-    }, "+=2") // Задержка 2 секунды перед началом фейда сообщения
+      duration: 0.3
+    }, "+=1") // Задержка 2 секунды перед началом фейда сообщения
   
     // Удаление сообщения
     .add(() => {
@@ -44,7 +44,7 @@ export const animatePageIn = () => {
     tl.to(banners, {
       yPercent: 100,
       stagger: 0.1,
-      duration: 1
+      duration: 0.2
     });
   };
   
