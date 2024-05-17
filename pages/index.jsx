@@ -11,50 +11,49 @@ import { Reveal } from '@components/Reveal';
 import Select from '@components/Select';
 import Slider from '@components/Slider';
 import Template from '@components/template';
-
+import PreAnimationMessage from '@components/PreAnimationMessege';
 const Home = ({ children }) => {
     return (
         <Template>
 
-            <div>
+        <div>
 
-                <div className="hidden md:flex">
-                    {/* <CustomCursor /> */}
-                </div>
-                <NavbarMenu />
+            <div className="hidden md:flex">
+                {/* <CustomCursor /> */}
+            </div>
+            <NavbarMenu />
 
-                <div className="circle"></div>
-                <div className="main">
-                    <div className="gradient" />
-                </div>
-                <main className='app'>
+            <div className="circle"></div>
+            <div className="main">
+                <div className="gradient" />
+            </div>
+            <main className='app'>
 
-                    <div>
-                        <Reveal>
-                            <Main />
-                        </Reveal>
+                <div>
+                    <Main />
 
-                        {/* <Reveal>
+                    {/* <Reveal>
                         <About />
                     </Reveal> */}
 
-                        <Reveal>
-                            <Select />
-                        </Reveal>
-                        {/* <Reveal>
+                    <Reveal>
+                        <Select />
+                    </Reveal>
+                    {/* <Reveal>
                         <Skills />
                     </Reveal>
                     */}
-                        <Reveal>
-                            <Slider />
-                        </Reveal>
+                    <Reveal>
+                        <Slider />
+                    </Reveal>
 
-                        {children}
-                    </div>
-                </main>
+                    <PreAnimationMessage />
+                    {children}
+                </div>
+            </main>
 
 
-            </div>
+        </div>
         </Template>
 
 
