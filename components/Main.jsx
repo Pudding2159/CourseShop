@@ -44,7 +44,7 @@ const Main = () => {
         const animationParams = [
             { duration: 0.5, ease: 'power4.out', stagger: 0.4, types: 'words', y: '0%' },
             { duration: 0.8, ease: 'power4.out', stagger: 0.3, types: 'words', y: '-25%' },
-            { duration: 0.08, ease: 'expo.out', stagger: 0.3, types: 'words', y: '0%' },
+            { duration: 0.08, ease: 'expo.out', stagger: 0.3, types: 'lines', y: '0%' },
             { duration: 0.2, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%' },
             { duration: 0.31, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%' }
         ];

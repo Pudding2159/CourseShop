@@ -51,7 +51,7 @@ export const animatePageIn = () => {
 
   // Анимация баннеров
   tl.to(banners, {
-    yPercent: 100,
+    yPercent: -100,
     stagger: 0.04,
     duration: 0.2
   });
