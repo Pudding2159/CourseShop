@@ -43,10 +43,10 @@ const Main = () => {
 
         const animationParams = [
             { duration: 0.5, ease: 'power4.out', stagger: 0.4, types: 'words', y: '0%' },
-            { duration: 1.3, ease: 'power4.out', stagger: 0.4, types: 'words', y: '-25%' },
-            { duration: 0.15, ease: 'expo.out', stagger: 0.3, types: 'words', y: '0%' },
-            { duration: 0.7, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%' },
-            { duration: 0.5, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%' }
+            { duration: 0.8, ease: 'power4.out', stagger: 0.3, types: 'words', y: '-25%' },
+            { duration: 0.08, ease: 'expo.out', stagger: 0.3, types: 'words', y: '0%' },
+            { duration: 0.2, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%' },
+            { duration: 0.31, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%' }
         ];
 
         const splitTypes = refs.map((ref, index) => createAnimation(ref, tl, animationParams[index]));
@@ -62,7 +62,7 @@ const Main = () => {
 
                 <div className="">
 
-                    <p ref={refs[2]} className='uppercase text-ms tracking-widest text-[#D9DAD8]' >Let's work together</p>
+                    <p ref={refs[2]} className='uppercase text-2xl tracking-widest text-[#D9DAD8]' >Let's work together</p>
 
                     <h1 ref={refs[0]} className='uppercase text-5xl text-[#D9DAD8] ms:hidden font-viola'>
                         Rita <span className="text-[#D9DAD8]  font-viola">Hory</span>
@@ -74,7 +74,7 @@ const Main = () => {
                     </h1>
 
                     <div ref={refs[3]} className='overflow-hidden'>
-                        <h1 className='uppercase xs:py-3 md:py-14 md:pl-32 xs:text-lg ms:text-xl tracking-widest text-[#D9DAD8] '>
+                        <h1 className='uppercase xs:py-3 md:py-14 xs:text-lg ms:text-3xl tracking-widest text-[#D9DAD8] '>
                             Experienced pianist and music composer with
                             over 10 years of experience  and a professional music teacher.
                         </h1>
