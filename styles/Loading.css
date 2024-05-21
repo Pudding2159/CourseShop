@@ -1,0 +1,124 @@
+:root {
+    --container-size: 175px;
+    --black-size: 150px;
+    --white-size: 70px;
+    --center-size: 20px;
+    --border-size: 111px;
+    --player-circ-size: 25px;
+    --player-rect-width: 10px;
+    --player-rect-height: 55px;
+    --border-thickness: 3px;
+  }
+
+  /* Small screens */
+  @media (max-width: 600px) {
+    :root {
+      --container-size: 80px;
+      --black-size: 65px;
+      --white-size: 30px;
+      --center-size: 12px;
+      --border-size: 60px;
+      --player-circ-size: 15px;
+      --player-rect-width: 6px;
+      --player-rect-height: 30px;
+      --border-thickness: 2px;
+    }
+  }
+
+  .container {
+    width: var(--container-size);
+    height: var(--container-size);
+    background-color: #abc4aa82;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 5px 5px 0 0 #675d507b;
+  }
+
+  .plate {
+    width: fit-content;
+  }
+
+  .plate .black,
+  .plate .white,
+  .plate .center,
+  .plate .border {
+    border-radius: 100%;
+  }
+
+  .container,
+  .plate .black,
+  .plate .white,
+  .plate .border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .plate .black {
+    width: var(--black-size);
+    height: var(--black-size);
+    background-color: #6a5c4ae2;
+    animation: rotation 2s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  .plate .white {
+    width: var(--white-size);
+    height: var(--white-size);
+    background-color: #f3deba7b;
+  }
+
+  .plate .center {
+    width: var(--center-size);
+    height: var(--center-size);
+    background-color: #675d5090;
+  }
+
+  .plate .border {
+    width: var(--border-size);
+    height: var(--border-size);
+    border-top: var(--border-thickness) solid #f3deba7c;
+    border-bottom: var(--border-thickness) solid #f3deba69;
+    border-left: var(--border-thickness) solid #675d507d;
+    border-right: var(--border-thickness) solid #675d5069;
+  }
+
+  .player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    rotate: -45deg;
+  }
+
+  .player .circ {
+    width: var(--player-circ-size);
+    height: var(--player-circ-size);
+    background-color: #f3deba71;
+    border-radius: 100%;
+    z-index: 1;
+  }
+
+  .player .rect {
+    width: var(--player-rect-width);
+    height: var(--player-rect-height);
+    background-color: #f3deba57;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5px;
+  }

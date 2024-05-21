@@ -11,7 +11,6 @@ import { Reveal } from '@components/Reveal';
 import Select from '@components/Select';
 import Slider from '@components/Slider';
 import Template from '@components/template';
-import PreAnimationMessage from '@components/PreAnimationMessege';
 const Home = ({ children }) => {
     return (
         <Template>
@@ -47,7 +46,6 @@ const Home = ({ children }) => {
                         <Slider />
                     </Reveal>
 
-                    <PreAnimationMessage />
                     {children}
                 </div>
             </main>
