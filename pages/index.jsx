@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React, { useEffect } from 'react'
 import '@styles/globals.css';
 import CustomCursor from '@components/Cursors';
 import NavbarMenu from '@components/NavbarMenu';
@@ -11,7 +11,12 @@ import { Reveal } from '@components/Reveal';
 import Select from '@components/Select';
 import Slider from '@components/Slider';
 import Template from '@components/template';
+import { PanelScroll } from '@components/PanelScroll';
+
 const Home = ({ children }) => {
+    useEffect(() => {
+        PanelScroll();
+    }, [])
     return (
         <Template>
 
@@ -28,26 +33,23 @@ const Home = ({ children }) => {
             </div>
             <main className='app'>
 
-                <div>
+                <div className="panel blue">
                     <Main />
-
-                    {/* <Reveal>
-                        <About />
-                    </Reveal> */}
-
-                    <Reveal>
-                        <Select />
-                    </Reveal>
-                    {/* <Reveal>
-                        <Skills />
-                    </Reveal>
-                    */}
-                    <Reveal>
-                        <Slider />
-                    </Reveal>
-
-                    {children}
                 </div>
+
+                <Reveal>
+                    <div className="panel fiol">
+                        <Select />
+                    </div>
+                </Reveal>
+
+                <Reveal>
+                    <div className="panel red">
+                        <Slider />
+                    </div>
+                </Reveal>
+
+                {children}
             </main>
 
 

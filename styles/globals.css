@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,17 +22,6 @@ html
   pointer-events: none;
 }
 
-.main:after {
-  content: "";
-  background-image: url("/images/paper.jpg");
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0.17;
-}
-
 
 @media screen and (max-width: 640px) {
   .main {
@@ -44,9 +31,7 @@ html
 
 /* Tailwind Styles */
 
-.app {
-  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
-}
+
 
 .black_btn {
   @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
@@ -140,50 +125,91 @@ html
   @apply flex justify-between items-center;
 }
 
-
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  position: relative; /* Обязательно для правильного позиционирования псевдоэлемента */
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  position: relative; /* Обязательно для правильного позиционирования псевдоэлемента */
+}
+
+body::before {
+  content: "";
+  background-image: url("/images/Hory_image_1.png");
+  background-size: cover; /* Масштабирование изображения, чтобы оно покрывало весь экран */
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed; /* Фиксированное позиционирование */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2; /* Расположение позади содержимого страницы */
+}
+
+body::after {
+  content: "";
+  background-image: url("/images/noise4k.png");
+  background-repeat: repeat; /* Повторение текстуры */
+  background-size: cover; /* Масштабирование текстуры, чтобы она покрывала весь экран */
+  z-index: -1; /* Расположение позади содержимого страницы */
+  position: fixed; /* Фиксированное позиционирование */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.18;
+  pointer-events: none; /* Исключает элемент из событий мыши */
+  background-attachment: fixed; /* Фиксирование фона */
+
+}
+
+.background-element {
+  width: 100%;
+  height: 100%;
+  position: relative; /* Обязательно для правильного позиционирования */
   background-image: 
-    radial-gradient(ellipse at 50% 40%, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.47) 25%, transparent 50%),
-    radial-gradient(ellipse at 50% 30%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 30%, transparent 50%),
-    url('/images/Hory_image_1.png');
+    radial-gradient(ellipse at 50% 40%, rgba(0, 0, 0, 0.439) 0%, rgba(0, 0, 0, 0.47) 25%, transparent 50%),
+    radial-gradient(ellipse at 50% 30%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 30%, transparent 50%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: scroll;
+  background-attachment: fixed; /* Фиксирование фона */
 }
 
-/* Медиазапрос для мобильных устройств */
 @media (max-width: 767px) {
-  html, body {
+  .background-element {
     background-image: 
       linear-gradient(to bottom, rgba(0, 0, 0, 0.659) 40%, rgba(0, 0, 0, 0.67) 25%, transparent 50%),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.15) 30%, transparent 50%),
-      url('/images/Hory_image_1.png');
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.15) 30%, transparent 50%);
     background-size: 
-      100% 170%, /* Ширина и высота первого градиента */
-      100% 170%, /* Ширина и высота второго градиента */
-      cover; /* Размер фонового изображения */
+      100% 170%, 
+      100% 170%; 
     background-position:
-      center top, /* Позиция первого градиента */
-      center center; /* Позиция второго градиента */
-    background-repeat: no-repeat, no-repeat, no-repeat; /* Предотвращаем повторение градиентов */
+      center top, 
+      center center; 
+    background-repeat: no-repeat, no-repeat; 
+    background-attachment: fixed; /* Фиксирование фона на мобильных устройствах */
   }
 }
 
-/* Медиазапрос для планшетов и настольных ПК */
 @media (min-width: 768px) {
-  html, body {
+  .background-element {
     background-image: 
-    radial-gradient(ellipse 200% 120% at 50% 26%, rgba(0, 0, 0, 0.813) 1%, rgba(0, 0, 0, 0.71) 40%, transparent 60%),
-    radial-gradient(ellipse 100% 60% at 50% 40%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 25%, transparent 40%),
-    url('/images/Hory_image_1.png');
+      radial-gradient(ellipse 200% 120% at 50% 26%, rgba(45, 45, 45, 0.79) 1%, rgba(0, 0, 0, 0.71) 40%, transparent 60%),
+      radial-gradient(ellipse 100% 60% at 50% 40%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.05) 25%, transparent 40%);
     background-size: cover;
+    background-attachment: fixed; /* Фиксирование фона на больших экранах */
   }
 }
-
-
-

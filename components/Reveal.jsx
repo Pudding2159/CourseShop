@@ -21,7 +21,7 @@ export const Reveal = ({ children }) => {
         visible: { 
           opacity: 1, 
           y: 0, 
-          transition: { duration: 2.2, delay: 0.27 }
+          transition: { duration: 0.3}
         }
       };
       
@@ -32,7 +32,7 @@ export const Reveal = ({ children }) => {
             initial="hidden"
             animate={controls}
             variants={variants}
-            transition={{ duration: 0.5, delay: 0.25 }}
+            transition={{ duration: 0.3, delay: 0.25 }}
             layout // Добавляем этот пропс, чтобы включить анимацию макета
         >
             {children}

@@ -1,0 +1,14 @@
+  @keyframes rotate {
+    100%   { transform: rotate(360deg); }
+  }
+  
+  svg {
+    mix-blend-mode: difference;
+    animation: move 5s linear infinite;
+  }
+  
+  .halo {
+    animation: rotate 5s linear infinite;
+    transform-origin: center center;
+  }
+  
