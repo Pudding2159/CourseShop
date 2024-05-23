@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
 import '@styles/Fonts.css';
+import '@styles/globals.css';
+
 import '@styles/Light_style.css'
 import '@styles/More_button.css'
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";

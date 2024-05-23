@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from 'react'
-import '@styles/globals.css';
+// import '@styles/globals.css';
 import CustomCursor from '@components/Cursors';
 import NavbarMenu from '@components/NavbarMenu';
 import Main from "@components/Main";
@@ -18,7 +18,7 @@ const Home = ({ children }) => {
         PanelScroll();
     }, [])
     return (
-        <Template>
+        // <Template>
 
         <div>
 
@@ -54,7 +54,7 @@ const Home = ({ children }) => {
 
 
         </div>
-        </Template>
+        // </Template>
 
 
     );
