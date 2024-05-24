@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
 import '@styles/Fonts.css';
-import '@styles/globals.css';
+// import '@styles/globals.css';
 
 import '@styles/Light_style.css'
 import '@styles/More_button.css'
@@ -77,7 +77,9 @@ const Main = () => {
     return (
         <div id="Home">
 
-            <div className='background-element w-full h-auto mx-auto p-2 flex justify-center items-center text-left md:pt-[200px] xs:pt-[50%]'>
+            <div className='w-full h-auto mx-auto p-2 flex justify-center items-center text-left md:pt-[200px] xs:pt-[50%]'
+                style={{ backgroundImage: "url('/images/Hory_image_1.png')", backgroundRepeat: "repeat", backgroundPosition: "center center"}}>
+
 
                 <div className="max-w-[1240px]">
 
@@ -101,7 +103,7 @@ const Main = () => {
 
                     <div className='flex justify-center' >
 
-                    {/* md:p-14 */}
+                        {/* md:p-14 */}
                         <div className="flex justify-center xs:p-14 md:p-3 " ref={refs[4]}>
                             {/* <Link href='/#Select'>
                                 <button className="btn">
@@ -122,7 +124,7 @@ const Main = () => {
                                     <span className="text-2xl text-[#2e2b2b] font-viola pl-3">More </span>
                                 </button>
                             </Link> */}
-                            
+
                             {/* Trash */}
                             <div>
                                 <svg width="180" height="180" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">

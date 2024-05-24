@@ -11,6 +11,7 @@ import Select from '@components/Select';
 import Slider from '@components/Slider';
 import Template from '@components/template';
 import { PanelScroll } from '@components/PanelScroll';
+import '@styles/globals.css';
 
 const Home = ({ children }) => {
     useEffect(() => {
