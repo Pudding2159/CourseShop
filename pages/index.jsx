@@ -55,11 +55,11 @@ const Home = ({ children }) => {
                 <div className="panel blue">
                     <Main />
                 </div>
-                <Reveal>
+                {/* <Reveal> */}
                     <div className="panel fiol">
                         <Select />
                     </div>
-                </Reveal>
+                {/* </Reveal> */}
                 <Reveal>
                     <div className="panel red">
                         <Slider />
