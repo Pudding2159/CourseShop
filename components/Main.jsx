@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
 import '@styles/Fonts.css';
-// import '@styles/globals.css';
+import '@styles/globals.css';
 
 import '@styles/Light_style.css'
 import '@styles/More_button.css'
@@ -77,9 +77,7 @@ const Main = () => {
     return (
         <div id="Home">
 
-            <div className='w-full h-screen mx-auto p-2 flex justify-center items-center text-left md:pt-[200px] xs:pt-[50%]'
-                style={{ backgroundImage: "url('/images/Hory_image_1.png')", backgroundRepeat: "repeat", backgroundPosition: "center center"}}>
-                
+            <div className='gradient-background w-full h-screen mx-auto p-2 flex justify-center items-center text-left md:pt-[200px] xs:pt-[50%]'>                
 
                 <div className="max-w-[1240px]">
 
