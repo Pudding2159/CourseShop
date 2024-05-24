@@ -36,9 +36,7 @@ const Home = ({ children }) => {
         };
     }, []);
 
-    useEffect(() => {
-        PanelScroll();
-    }, []);
+    
 
     return (
         <div id="wrapper">
