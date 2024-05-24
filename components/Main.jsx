@@ -77,9 +77,9 @@ const Main = () => {
     return (
         <div id="Home">
 
-            <div className='w-full h-auto mx-auto p-2 flex justify-center items-center text-left md:pt-[200px] xs:pt-[50%]'
+            <div className='w-full h-screen mx-auto p-2 flex justify-center items-center text-left md:pt-[200px] xs:pt-[50%]'
                 style={{ backgroundImage: "url('/images/Hory_image_1.png')", backgroundRepeat: "repeat", backgroundPosition: "center center"}}>
-
+                
 
                 <div className="max-w-[1240px]">
 
