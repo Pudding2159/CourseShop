@@ -14,29 +14,7 @@ import { PanelScroll } from '@components/PanelScroll';
 import '@styles/globals.css';
 
 const Home = ({ children }) => {
-    useEffect(() => {
-        const setHeight = () => {
-            const height = window.innerHeight;
-            document.documentElement.style.height = `${height}px`;
-            document.body.style.height = `${height}px`;
-            const wrapper = document.getElementById('wrapper');
-            if (wrapper) {
-                wrapper.style.height = `${height}px`;
-            }
-        };
-
-        // Initial set height
-        setHeight();
-
-        // Update height on resize
-        window.addEventListener('resize', setHeight);
-
-        // Cleanup event listener on unmount
-        return () => {
-            window.removeEventListener('resize', setHeight);
-        };
-    }, []);
-
+    
     useEffect(() => {
         PanelScroll();
     }, []);
