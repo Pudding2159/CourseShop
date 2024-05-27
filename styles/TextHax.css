@@ -1,0 +1,12 @@
+/* styles/CustomStyles.css */
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+  }
+  
+  .word {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+  

@@ -44,16 +44,16 @@ const NavbarMenu = () => {
     }, [lastScrollY]);
 
     return (
-        <div className={`fixed w-full h-20 shadow-xl z-[100] transition-all duration-[800ms] ${showNav ? 'top-0 opacity-100' : 'top-[-100%] opacity-0'}`}>
-            <div className='fixed w-full h-20 bg-[#3F3C38] shadow-xl z-[100]'>
+        <div className={`fixed w-full h-14 shadow-2xl z-[100] transition-all duration-[800ms] ${showNav ? 'top-0 opacity-100' : 'top-[-100%] opacity-0'}`}>
+            <div className='fixed w-full h-14 bg-[#3F3C38] shadow-xl z-[100]'>
                 <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
 
 
-                    <div className="py-5 w-full">
+                    <div className="w-full">
                         <ul className='hidden ms:flex flex-row justify-center gap-32' >
                             <Link href='/#Home'>
                                 <h1>
-                                    <span className="p-4  key-tag font-viola text-xl" >
+                                    <span className="px-4  key-tag font-viola text-xl" >
                                         Home
                                     </span>
                                 </h1>
@@ -61,7 +61,7 @@ const NavbarMenu = () => {
 
                             <Link href='/#Select'>
                                 <h1>
-                                    <span className="p-4 key-tag font-viola text-xl" >
+                                    <span className="px-4 key-tag font-viola text-xl" >
                                         choice
                                     </span>
                                 </h1>
@@ -69,7 +69,7 @@ const NavbarMenu = () => {
 
                             <Link href='/#Project'>
                                 <h1>
-                                    <span className="p-4 key-tag font-viola text-xl" >
+                                    <span className="px-4 key-tag font-viola text-xl" >
                                         Registrations
                                     </span>
                                 </h1>
@@ -77,7 +77,7 @@ const NavbarMenu = () => {
 
                             <Link href='/#Home'>
                                 <h1>
-                                    <span className="p-4 key-tag font-viola text-xl" >
+                                    <span className="px-4 key-tag font-viola text-xl" >
                                         Contact
                                     </span>
                                 </h1>
