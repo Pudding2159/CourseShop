@@ -30,6 +30,7 @@
     "split-type": "^0.3.4",
     "three": "^0.164.1",
     "three-canvas-renderer": "^2.0.0",
+    "three-stdlib": "^2.30.2",
     "three.js": "^0.77.0",
     "ws": "^8.14.2"
   },

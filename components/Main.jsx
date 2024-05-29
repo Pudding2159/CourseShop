@@ -6,12 +6,12 @@ import '@styles/globals.css';
 import ReactDOM from 'react-dom';
 import Clef from '@models/Clef';
 import { Canvas } from '@react-three/fiber';
+
+
+
+
+
 import { OrbitControls } from '@react-three/drei';
-
-
-
-
-
 
 import '@styles/Light_style.css'
 import '@styles/More_button.css'
@@ -85,7 +85,7 @@ const Main = () => {
                 trigger: ref.current,
                 start: params.start,
                 end: params.end,
-                markers: 'true',
+                // markers: 'true',
                 onUpdate: (self) => {
                     gsap.to(ref.current, { opacity: 1 - self.progress, ease: 'power1.out', duration: 0.35 });
                 }
@@ -110,70 +110,20 @@ const Main = () => {
                     <div style={{ height: '200vh' }}> {/* Высота больше 100vh для демонстрации прокрутки */}
                         <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', pointerEvents: 'none' }}>
                             <Canvas style={{ width: '100vw', height: '100vh', pointerEvents: 'auto' }}>
-                                <ambientLight intensity={0.5} />
-                                <pointLight position={[10, 10, 10]} />
-                                <Clef position={[0, 0, 0]} />
-                                <OrbitControls />
+                                <ambientLight color={"white"} intensity={0.9} />
+                                <ambientLight intensity={0.1} />
+                                <pointLight position={[0, -10, -30]} />
+                                <Clef position={[0, -10, -260]} scale={[0.1, 0.1, 0.3]} />
+                                {/* OrbitControls удалены, чтобы предотвратить взаимодействие с сценой */}
                             </Canvas>
-                        </div>
-                        <div style={{ paddingTop: '100vh' }}>
-                            {/* Контент страницы для демонстрации прокрутки */}
-                            <h1>Содержимое страницы</h1>
-                            <p>Прокручивайте вниз, чтобы увидеть больше контента.</p>
-                        </div>
-                    </div>
-
-                    <div className="w-full h-screen">
-
-                        {/* navigator and 3d models */}
-
-
-
-                    </div>
-                    <h1 className='uppercase text-5xl text-[#D9DAD8] ms:hidden font-viola'>
-                        Rita <span className="text-[#D9DAD8]  font-viola">Hory</span>
-                    </h1>
-
-
-
-                    <h1 ref={refs[1]} className='text-center overflow-hidden uppercase text-[13vw] text-[#D9DAD8] hidden ms:block font-viola'>
-                        Rita Hory
-                    </h1>
-
-                    <div className="hidden md:grid gap-32 grid-cols-12">
-                        <div className="py-[5vh]  col-start-1 col-end-6 h-full w-full">
-                            <img
-                                src="/images/Hory_image_cut.jpg"
-                                alt="Description"
-                                className="w-full h-full object-cover rounded-2xl"
-                            />
-                        </div>
-
-
-
-                    </div>
-
-
-                    <div ref={refs[3]} className='overflow-hidden'>
-                        <h1 className='uppercase xs:py-3 md:py-14 md:pl-5 md:text-4xl xs:text-lg tracking-widest text-[#D9DAD8] font-viola'>
-                            Experienced pianist and music composer with
-                            over 10 years of experience  and a professional music teacher.
-                        </h1>
-                    </div>
-
-
-                    {/* md:p-14 */}
-                    {/* ref={refs[4]} */}
-                    <div className="overflow-hidden md:pt-10 flex flex-row justify-between text-sm md:text-3xl text-[#D9DAD8]  font-face-my69 ">
-                        <div className="md:pl-5 w-auto h-auto  flex flex-col" ref={refs[4]} >
-                            <div>50.8136° S, 30.9631° E</div>
-                            <div>KYIV, UKRAINE</div>
-                        </div>
-
-                        <div>
-                            <p className="md:pr-10" ref={refs[5]} >( SCROLL FOR MORE ↓ )</p>
+                            {/* Текстовый слой поверх Canvas */}
+                            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1000 }}
+                                className=" text-[#D9DAD8] font-viola xs:text-8xl md:text-9xl  absolute text-center">
+                                RITA HORY
+                            </div>
                         </div>
                     </div>
+
 
                 </div>
 

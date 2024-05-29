@@ -1,26 +1,52 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
+import * as THREE from 'three';
 
 const Clef = (props) => {
     const group = useRef();
-    const { nodes, materials } = useGLTF('/models/Clef.glb');
 
-    // This hook allows us to rotate the model on every frame
-    useFrame(() => {
+    const { nodes, materials } = useGLTF('/models/Clef2.glb');
+    const textureLoader = new THREE.TextureLoader();
+    const texture = textureLoader.load('models/gradinet1.jpg', 
+        () => console.log("Texture loaded successfully"),
+        undefined,
+        (error) => console.error("Failed to load texture:", error)
+    );
+
+    const amplitude = 0.6;
+    const frequency = 2;
+    let time = 0.1;
+
+    useFrame((state, delta) => {
         if (group.current) {
-            group.current.rotation.y += 0.01;
+            time += delta;
+            const angle = amplitude * Math.sin(frequency * time);
+            group.current.rotation.y = angle;
         }
     });
+
+    useEffect(() => {
+        if (group.current) {
+            const mesh = group.current.children[0];
+            const metalMaterial = new THREE.MeshStandardMaterial({
+                map: texture,
+                transmission: 0.9, // Добавляет эффект преломления (новое свойство в r129)
+                reflectivity: 0.9, // Отражательная способность
+                
+            });
+            mesh.material = metalMaterial;
+            mesh.material.needsUpdate = true;
+        }
+    }, [nodes]);
 
     return (
         <group ref={group} {...props} dispose={null}>
             <mesh
                 castShadow
                 receiveShadow
-                geometry={nodes.Mesh_Mesh_head_geo001_lambert2SG001.geometry}
-                material={materials['lambert2SG.001']}
-                rotation={[-Math.PI / 2, 0, 0]}
+                geometry={nodes.treblepolySurface1.geometry}
+                material={nodes.treblepolySurface1.material}
             />
         </group>
     );
@@ -28,4 +54,4 @@ const Clef = (props) => {
 
 export default Clef;
 
-useGLTF.preload('/models/Clef.glb');
+useGLTF.preload('/models/Clef2.glb');
