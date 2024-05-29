@@ -20,6 +20,8 @@ const Home = ({ children }) => {
     }, []);
 
     return (
+
+        <Template>
         <div id="wrapper">
             <div className="hidden md:flex">
                 {/* <CustomCursor /> */}
@@ -46,6 +48,8 @@ const Home = ({ children }) => {
                 {children}
             </main>
         </div>
+        </Template>
+
     );
 }
 
