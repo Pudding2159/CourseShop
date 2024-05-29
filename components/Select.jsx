@@ -64,7 +64,7 @@ function Select() {
 
     
     return (
-        <div style={{ backgroundColor: '#FFFFFF' }} className=" rounded-3xl">
+        <div style={{ backgroundColor: '#FFFFFF' }} className="rounded-t-3xl">
 
 
             <div className = "flex flex-col w-screen h-auto m-auto max-w-[1240px] md:pb-[200px]">

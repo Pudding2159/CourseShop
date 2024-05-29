@@ -3,16 +3,8 @@ import React, { useEffect, useRef } from 'react';
 import '@styles/Fonts.css';
 import '@styles/globals.css';
 
-import ReactDOM from 'react-dom';
 import Clef from '@models/Clef';
 import { Canvas } from '@react-three/fiber';
-
-
-
-
-
-import { OrbitControls } from '@react-three/drei';
-
 import '@styles/Light_style.css'
 import '@styles/More_button.css'
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
@@ -91,7 +83,7 @@ const Main = () => {
                 }
             });
         });
-
+        
         return () => {
             splitTypes.forEach(typeSplit => typeSplit.revert());
         };
@@ -113,14 +105,21 @@ const Main = () => {
                                 <ambientLight color={"white"} intensity={0.9} />
                                 <ambientLight intensity={0.1} />
                                 <pointLight position={[0, -10, -30]} />
-                                <Clef position={[0, -10, -260]} scale={[0.1, 0.1, 0.3]} />
+                                <Clef position={[-1, -7, -10]} scale={[0.2, 0.2, 1]} />
                                 {/* OrbitControls удалены, чтобы предотвратить взаимодействие с сценой */}
                             </Canvas>
                             {/* Текстовый слой поверх Canvas */}
                             <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1000 }}
-                                className=" text-[#D9DAD8] font-viola xs:text-8xl md:text-9xl  absolute text-center">
-                                RITA HORY
+                                className="xs:flex flex-col text-[#D9DAD8] font-viola xs:text-8xl md:text-[13vw]  text-center md:hidden">
+                                            <span className='md:mr-20'>RITA</span><span className='md:mr-20'>HORY</span>
                             </div>
+
+                            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1000 }}
+                                className=" text-[#D9DAD8] font-viola xs:text-8xl md:text-[13vw]  text-center xs:hidden md:flex">
+                                            <span style={{ margin: '0 170px' }}>RITA</span><span style={{ margin: '0 80px' }}>HORY</span>
+
+                            </div>
+
                         </div>
                     </div>
 

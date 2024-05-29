@@ -6,23 +6,30 @@ import * as THREE from 'three';
 const Clef = (props) => {
     const group = useRef();
 
-    const { nodes, materials } = useGLTF('/models/Clef2.glb');
+    const { nodes, materials } = useGLTF('/models/Clef5.glb');
     const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load('models/gradinet1.jpg', 
+    const texture = textureLoader.load('models/Matal2.jpg', 
         () => console.log("Texture loaded successfully"),
         undefined,
         (error) => console.error("Failed to load texture:", error)
     );
 
-    const amplitude = 0.6;
-    const frequency = 2;
+    const amplitude = 0.4; // Max vertical movement
+    const frequency = 1; // How fast the movement occurs
+
+    const amplitudeY = 0.005; // Max vertical movement
+    const frequencyY = 4; // How fast the movement occurs
+
     let time = 0.1;
 
     useFrame((state, delta) => {
         if (group.current) {
             time += delta;
+            const yPosition = amplitudeY * Math.sin(frequencyY * time);
             const angle = amplitude * Math.sin(frequency * time);
-            group.current.rotation.y = angle;
+
+            group.current.position.y += yPosition; // Adding vertical oscillation
+            group.current.rotation.y = angle; // Existing rotation logic
         }
     });
 
@@ -31,9 +38,6 @@ const Clef = (props) => {
             const mesh = group.current.children[0];
             const metalMaterial = new THREE.MeshStandardMaterial({
                 map: texture,
-                transmission: 0.9, // Добавляет эффект преломления (новое свойство в r129)
-                reflectivity: 0.9, // Отражательная способность
-                
             });
             mesh.material = metalMaterial;
             mesh.material.needsUpdate = true;
@@ -43,10 +47,11 @@ const Clef = (props) => {
     return (
         <group ref={group} {...props} dispose={null}>
             <mesh
-                castShadow
-                receiveShadow
-                geometry={nodes.treblepolySurface1.geometry}
-                material={nodes.treblepolySurface1.material}
+                  castShadow
+                  receiveShadow
+                  geometry={nodes.Object_2.geometry}
+                  material={materials.wire_224198087}
+                  rotation={[-Math.PI / 2, 0, 0]}
             />
         </group>
     );
@@ -54,4 +59,4 @@ const Clef = (props) => {
 
 export default Clef;
 
-useGLTF.preload('/models/Clef2.glb');
+useGLTF.preload('/models/Clef5.glb');
