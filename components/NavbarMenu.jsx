@@ -45,7 +45,7 @@ const NavbarMenu = () => {
 
     return (
         <div className={`fixed w-full h-14 shadow-2xl z-[100] transition-all duration-[800ms] ${showNav ? 'top-0 opacity-100' : 'top-[-100%] opacity-0'}`}>
-            <div className='fixed w-full h-14 bg-[#3F3C38] shadow-xl z-[100] rounded-b-xl'>
+            <div className='fixed w-full h-14 bg-[#80807ffd] shadow-xl z-[100] rounded-b-xl'>
                 <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16 rounded-3xl'>
 
 

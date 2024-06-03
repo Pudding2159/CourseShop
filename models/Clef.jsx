@@ -8,7 +8,7 @@ const Clef = (props) => {
 
     const { nodes, materials } = useGLTF('/models/Clef5.glb');
     const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load('models/web_66.jpg', 
+    const texture = textureLoader.load('models/web_661.webp', 
         () => console.log("Texture loaded successfully"),
         undefined,
         (error) => console.error("Failed to load texture:", error)

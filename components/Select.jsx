@@ -69,7 +69,6 @@ function Select() {
     return (
             <div style={{ backgroundColor: '#FFFFFF' }} className=" rounded-3xl">
 
-
                 <div className="flex flex-col w-screen h-auto m-auto max-w-[1240px] md:pb-[200px]">
                     <div className="flex flex-row relative justify-center md:pt-16">
                         <div ref={newElementRef} className="uppercase text-[#3F3C38] text-center xs:text-5xl md:text-[100px] md:pt-20 font-viola p-3 col-span-5 col-start-1 col-end-5">
