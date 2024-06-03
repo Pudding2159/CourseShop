@@ -47,18 +47,18 @@ const Main = () => {
         const getAnimationParams = () => {
             if (window.innerWidth <= 768) {
                 return [
-                    { duration: 0.5, ease: 'power4.out', stagger: 0.5, types: 'words', y: '0%', start: "top 0%", end: "top 10%" },
-                    { duration: 0, ease: 'power4.out', stagger: 0.4, types: 'words', y: '0%', start: "top 0%", end: "top 10%" },
-                    { duration: 0.08, ease: 'power4.out', stagger: 0.4, types: 'words', y: '8%', start: "top 80%", end: "top 0%" },
-                    { duration: 0.2, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 40%", end: "top 30%" },
+                    { duration: 0.5, ease: 'power4.out', stagger: 0.5, types: 'words', y: '0%', start: "top 0%", end: "top 0%" },
+                    { duration: 0, ease: 'power4.out', stagger: 0.4, types: 'words', y: '0%', start: "top 20%", end: "top 0%" },
+                    { duration: 0.08, ease: 'power4.out', stagger: 0.4, types: 'words', y: '8%', start: "top -10%", end: "top -50%" },
+                    { duration: 0.2, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 20%", end: "top 0%" },
                     { duration: 0.1, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 60%", end: "top 50%" },
                     { duration: 0.1, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 60%", end: "top 50%" }
                 ];
             } else {
                 return [
                     { duration: 0.5, ease: 'power4.out', stagger: 0.4, types: 'words', y: '0%', start: "top 10%", end: "top 10%" },
-                    { duration: 0.8, ease: 'power4.out', stagger: 0.3, types: 'words', y: '0%', start: "top 10%", end: "top -15%" },
-                    { duration: 0.08, ease: 'expo.out', stagger: 0.3, types: 'lines', y: '0%', start: "top 10%", end: "top -15%" },
+                    { duration: 0.8, ease: 'power4.out', stagger: 0.3, types: 'words', y: '0%', start: "top 35%", end: "top -10%" },
+                    { duration: 0.08, ease: 'expo.out', stagger: 0.3, types: 'lines', y: '0%', start: "top 0%", end: "top -50%" },
                     { duration: 0.2, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 50%", end: "top 40%" },
                     { duration: 0.1, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 70%", end: "top 60%" },
                     { duration: 0.1, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 70%", end: "top 60%" }
@@ -77,7 +77,7 @@ const Main = () => {
                 trigger: ref.current,
                 start: params.start,
                 end: params.end,
-                // markers: 'true',
+                markers: 'true',
                 onUpdate: (self) => {
                     gsap.to(ref.current, { opacity: 1 - self.progress, ease: 'power1.out', duration: 0.35 });
                 }
@@ -99,9 +99,9 @@ const Main = () => {
                     {/* <p ref={refs[2]} className='overflow-hidden md:pl-5  uppercase xs:text-2xl md:text-4xl tracking-widest text-[#D9DAD8] font-viola' >Let's work together</p> */}
 
 
-                    <div> {/* Высота больше 100vh для демонстрации прокрутки */}
-                        <div  style={{ position: 'fixed', top: 0, left: "10%", width: '80vw', height: '100vh', pointerEvents: 'none' }}>
-                            < Canvas className='flex'>
+                    <div > {/* Высота больше 100vh для демонстрации прокрутки */}
+                        <div style={{ position: 'fixed', top: 0, left: "10%", width: '80vw', height: '100vh', pointerEvents: 'none' }}>
+                            < Canvas ref={refs[2]} className='flex'>
                                 <ambientLight color={"white"} intensity={1.8} />
                                 <ambientLight intensity={0.8} />
                                 <pointLight position={[0, -10, 0]} />
@@ -110,7 +110,7 @@ const Main = () => {
                             </Canvas>
 
                             {/* Текстовый слой поверх Canvas */}
-                            <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1000 }}
+                            <div ref={refs[3]} style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1000 }}
                                 className="xs:flex flex-col text-[#D9DAD8] font-viola xs:text-8xl md:text-[13vw]  text-center md:hidden">
                                             <span className='md:mr-20'>RITA</span><span className='md:mr-20'>HORY</span>
                             </div>

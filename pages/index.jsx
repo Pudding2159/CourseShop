@@ -38,11 +38,11 @@ const Home = ({ children }) => {
                         <Select />
                     </div>
                 {/* </Reveal> */}
-                <Reveal>
+                {/* <Reveal>
                     <div className="panel red">
                         <Slider />
                     </div>
-                </Reveal>
+                </Reveal> */}
                 {children}
             </main>
         </div>
