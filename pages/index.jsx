@@ -1,9 +1,10 @@
 "use client";
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
+import '@styles/globals.css';
 import CustomCursor from '@components/Cursors';
 import NavbarMenu from '@components/NavbarMenu';
 import Main from "@components/Main";
-import About from "@components/About";
+import About from "@components/About"
 import Skills from '@components/Skills';
 import Projects from '@components/Projects';
 import { Reveal } from '@components/Reveal';
@@ -11,44 +12,50 @@ import Select from '@components/Select';
 import Slider from '@components/Slider';
 import Template from '@components/template';
 import { PanelScroll } from '@components/PanelScroll';
-import '@styles/globals.css';
-
+import '@styles/TextHax.css'
 const Home = ({ children }) => {
-    
     useEffect(() => {
         PanelScroll();
-    }, []);
-
+    }, [])
     return (
+        // <Template>
 
-        <Template>
-        <div id="wrapper">
+        <div>
+
             <div className="hidden md:flex">
                 {/* <CustomCursor /> */}
             </div>
             <NavbarMenu />
+
             <div className="circle"></div>
             <div className="main">
                 <div className="gradient" />
             </div>
             <main className='app'>
-                <div className="panel blue">
+
+                <div className="panel blue ">
                     <Main />
                 </div>
+
                 {/* <Reveal> */}
                     <div className="panel fiol">
                         <Select />
                     </div>
                 {/* </Reveal> */}
-                <Reveal>
+
+                {/* <Reveal> */}
                     <div className="panel red">
-                        <Slider />
+                        <Skills />
                     </div>
-                </Reveal>
+                {/* </Reveal> */}
+
                 {children}
             </main>
+
+
         </div>
-        </Template>
+        // </Template>
+
 
     );
 }

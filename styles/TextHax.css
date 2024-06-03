@@ -1,12 +1,11 @@
-/* styles/CustomStyles.css */
-ul {
-    list-style-position: inside;
-    padding-left: 0;
-  }
-  
-  .word {
-    margin: 0;
-    padding: 0;
-    display: block;
-  }
-  
+.panel {
+  position: relative; /* Это обеспечит правильное позиционирование z-index */
+}
+
+.panel-fiol {
+  z-index: 2; /* Более высокий z-index для фиолетовой панели */
+}
+
+.panel-blue {
+  z-index: 1; /* Ниже z-index для синей панели */
+}

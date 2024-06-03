@@ -8,13 +8,13 @@ const Clef = (props) => {
 
     const { nodes, materials } = useGLTF('/models/Clef5.glb');
     const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load('models/Matal2.jpg', 
+    const texture = textureLoader.load('models/web_66.jpg', 
         () => console.log("Texture loaded successfully"),
         undefined,
         (error) => console.error("Failed to load texture:", error)
     );
 
-    const amplitude = 0.4; // Max vertical movement
+    const amplitude = 0.5; // Max vertical movement
     const frequency = 1; // How fast the movement occurs
 
     const amplitudeY = 0.005; // Max vertical movement
@@ -36,8 +36,10 @@ const Clef = (props) => {
     useEffect(() => {
         if (group.current) {
             const mesh = group.current.children[0];
-            const metalMaterial = new THREE.MeshStandardMaterial({
+            const metalMaterial = new THREE.MeshPhysicalMaterial({
                 map: texture,
+                metalness: 0.7, // Increased metalness
+                roughness: 0.1, // Reduced roughness for smoothness
             });
             mesh.material = metalMaterial;
             mesh.material.needsUpdate = true;

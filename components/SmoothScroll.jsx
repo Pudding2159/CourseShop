@@ -1,75 +1,38 @@
-// // components/SmoothScroll.jsx
-// import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 
-// const SmoothScroll = ({ children }) => {
-//   const containerRef = useRef(null);
+const SmoothScroll = ({ children }) => {
+  const containerRef = useRef(null);
 
-//   useEffect(() => {
-//     const initGSAP = async () => {
-//       const gsap = (await import('gsap')).default;
-//       const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+  useEffect(() => {
 
-//       gsap.registerPlugin(ScrollTrigger);
+    if (containerRef.current) {
+      const body = document.body,
+            scrollWrap = containerRef.current,
+            height = scrollWrap.getBoundingClientRect().height - 1,
+            speed = 0.04;
 
-//       const container = containerRef.current;
-//       const height = container.clientHeight;
+      let offset = 0;
 
-//       gsap.to(container, {
-//         y: () => -(height - window.innerHeight),
-//         ease: 'power2.out',
-//         scrollTrigger: {
-//           trigger: container,
-//           start: 'top top',
-//           end: 'bottom top',
-//           scrub: 1,
-//           invalidateOnRefresh: true,
-//           onUpdate: (self) => {
-//             const progress = self.progress;
-//             console.log('Current progress:', progress);
-//           },
-//         },
-//       });
+      body.style.height = Math.floor(height) + "px";
 
-//       let scrollY = 0;
-//       let velocity = 0;
-//       const friction = 0.95;
-//       const speed = 2;
+      function smoothScroll() {
+        offset += (window.pageYOffset - offset) * speed;
+        var scroll = `translateY(-${offset}px) translateZ(0)`;
+        scrollWrap.style.transform = scroll;
 
-//       function smoothScroll() {
-//         scrollY += (window.scrollY - scrollY) * friction;
-//         velocity += (window.scrollY - scrollY) * speed;
-//         velocity *= friction;
+        requestAnimationFrame(smoothScroll);
+      }
 
-//         gsap.to(container, {
-//           y: -scrollY,
-//           duration: 0.5,
-//           ease: 'power2.out',
-//         });
+      smoothScroll();
+    }
 
-//         requestAnimationFrame(smoothScroll);
-//       }
+  }, []); // Пустой массив зависимостей гарантирует, что эффект выполнится только один раз после монтирования компонента.
 
-//       smoothScroll();
+  return (
+    <div ref={containerRef}>
+      {children}
+    </div>
+  );
+};
 
-//       window.addEventListener('scroll', (e) => {
-//         window.scrollTo(0, 0);
-//       });
-
-//       return () => {
-//         window.removeEventListener('scroll', (e) => {
-//           window.scrollTo(0, 0);
-//         });
-//       };
-//     };
-
-//     initGSAP();
-//   }, []);
-
-//   return (
-//     <div ref={containerRef}>
-//       {children}
-//     </div>
-//   );
-// };
-
-// export default SmoothScroll;
+export default SmoothScroll;

@@ -10,7 +10,7 @@ import "@styles/animate_text.css"
 const Skills = () => {
     return (
 
-        <div id = "Skills" className="w-full h-full ms:p-2 pt-24">
+        <div id = "Skills" className="w-full h-full ms:p-2 pt-24" style={{ backgroundColor: '#FFFFFF' }}>
             <div className="flex flex-row items-center justify-center w-full h-auto gap-20">
                 <div className="pt-3 flex felx-row gap-12 ">
                     <div className="hidden ms:flex">
