@@ -47,10 +47,10 @@ const Main = () => {
         const getAnimationParams = () => {
             if (window.innerWidth <= 768) {
                 return [
-                    { duration: 0.5, ease: 'power4.out', stagger: 0.5, types: 'words', y: '0%', start: "top 0%", end: "top 0%" },
+                    { duration: 0, ease: 'power4.out', stagger: 0.5, types: 'words', y: '0%', start: "top 0%", end: "top 0%" },
                     { duration: 0, ease: 'power4.out', stagger: 0.4, types: 'words', y: '0%', start: "top 20%", end: "top 0%" },
-                    { duration: 0.08, ease: 'power4.out', stagger: 0.4, types: 'words', y: '8%', start: "top -10%", end: "top -50%" },
-                    { duration: 0.2, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 20%", end: "top 0%" },
+                    { duration: 0, ease: 'power4.out', stagger: 0.4, types: 'words', y: '0%', start: "top -10%", end: "top -50%" },
+                    { duration: 0.4, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 20%", end: "top 0%" },
                     { duration: 0.1, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 60%", end: "top 50%" },
                     { duration: 0.1, ease: 'expo.out', stagger: 0, types: 'lines', y: '0%', start: "top 60%", end: "top 50%" }
                 ];

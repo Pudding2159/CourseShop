@@ -43,7 +43,7 @@ const Home = ({ children }) => {
                         <Slider />
                     </div>
                 </Reveal> */}
-                {children}
+                {/* {children} */}
             </main>
         </div>
     );

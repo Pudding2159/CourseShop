@@ -7,9 +7,8 @@ import "@styles/new_button.css"
 import gsap from 'gsap';
 import SplitType from 'split-type';
 import SmoothScroll from './SmoothScroll';
-
-
-
+import Skills from './Skills';
+import AboutMe from './AboutMe';
 function Select() {
     const ref1 = useRef(null);
     const ref2 = useRef(null);
@@ -170,6 +169,9 @@ function Select() {
 
                     </div>
 
+                </div>
+                <div>
+                    <AboutMe/>
                 </div>
             </div>
     )

@@ -18,7 +18,7 @@ const About = () => {
 
 
                     <div className='flex col-span-2 col-start-1 w-auto h-auto m-auto shadow-xl shadow-gray-900 rounded-xl  items-center justify-center p-6 pt-8 hover:scale-105 ease-in duration-300'>
-                        <img className=' rounded-xl' src="/images/My_Image.jpg" alt='/' />
+                        <img class                               Name=' rounded-xl' src="/images/My_Image.jpg" alt='/' />
                     </div>
 
 
@@ -37,4 +37,4 @@ const About = () => {
     )
 }
 
-export default About
+export default About 

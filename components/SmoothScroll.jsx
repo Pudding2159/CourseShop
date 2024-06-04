@@ -11,7 +11,7 @@ const SmoothScroll = ({ children }) => {
             height = scrollWrap.getBoundingClientRect().height - 1,
             speed = 0.04;
 
-      let offset = 0;
+      let offset = 2;
 
       body.style.height = Math.floor(height) + "px";
 
