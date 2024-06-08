@@ -67,7 +67,7 @@ export const animatePageIn = () => {
   // Анимация появления сообщения
   tl.to(messageDiv, {
     opacity: 1,
-    duration: 1.5
+    duration: 0.3
   });
 
   // Установка начального состояния для всех баннеров
@@ -78,7 +78,7 @@ export const animatePageIn = () => {
   // Анимация исчезновения сообщения после задержки
   tl.to(messageDiv, {
     opacity: 0,
-    duration: 0.3
+    duration: 0.4
   }, "+=1") // Задержка перед началом анимации
 
     // Удаление сообщения из DOM

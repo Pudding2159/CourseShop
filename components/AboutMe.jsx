@@ -5,7 +5,7 @@ function AboutMe() {
         <div id="About">
             <div className="w-full flex flex-col md:h-full  items-center xs:p-5  md:py-48 z-[10] font-viola" >
                 <div className='max-w-[1240px]'>
-                    <div className=" text-[#3F3C38] mt-4 font-viola text-6xl md:text-9xl pb-8 text-center uppercase">Your musical mentor</div>
+                    <div className=" text-[#3F3C38] mt-4 font-viola text-6xl md:text-9xl pb-8 text-center uppercase">Your musical mentor 𝄞</div>
 
                     <div className="m-auto ms:grid grid-cols-11 font-viola gap-20  z-[10]" >
 

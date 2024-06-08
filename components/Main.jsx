@@ -77,7 +77,7 @@ const Main = () => {
                 trigger: ref.current,
                 start: params.start,
                 end: params.end,
-                markers: 'true',
+                // markers: 'true',
                 onUpdate: (self) => {
                     gsap.to(ref.current, { opacity: 1 - self.progress, ease: 'power1.out', duration: 0.35 });
                 }
