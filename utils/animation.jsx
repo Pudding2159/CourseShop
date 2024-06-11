@@ -34,7 +34,7 @@ const PreAnimationMessage = () => {
           </div>
         </div>
         <div className="uppercase  justify-center text-center text-4xl md:text-6xl pt-3" style={{ position: 'relative', zIndex: 2 }}>rita hory</div>
-        <div className="uppercase  justify-center text-center text-xl md:text-4xl font-viola " style={{ position: 'relative', zIndex: 2 }}>@Pudding_2159</div>
+        <div className="uppercase  justify-center text-center text-xl md:text-4xl " style={{ position: 'relative', zIndex: 2 }}>@Pudding_2159</div>
       </div>
     </div>
   );
