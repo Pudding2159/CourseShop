@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import '@styles/Fonts.css';
-import '../styles/Fonts.css';
 import React, { useRef } from 'react';
 import ReactDOMServer from 'react-dom/server';
 import '@styles/Loading.css'
